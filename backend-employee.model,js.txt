@@ -1,0 +1,32 @@
+file:  employee-model/js   shu pynkylla todo sha employee
+
+
+
+import mongoose from "mongoose"
+
+const todoListSchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  dob: {
+    type: Date,
+    required: true
+  },
+  designation: {
+    type: String,
+    required: true
+  }
+
+  // date: {
+  //   type: Date,
+  //   required: true,
+  //   default: Date.now,
+  // },
+})
+
+export const TodoList = mongoose.model("todolist", todoListSchema)
